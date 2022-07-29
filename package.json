@@ -1,12 +1,17 @@
 {
-  "name": "timecut",
+  "name": "@stagas/timecut",
   "version": "0.3.4-prerelease",
   "description": "Record smooth movies of web pages",
   "repository": {
     "type": "git",
+    "url": "https://github.com/stagas/timecut.git"
+  },
+  "author": "stagas",
+  "originalRepository": {
+    "type": "git",
     "url": "https://github.com/tungs/timecut.git"
   },
-  "author": {
+  "originalAuthor": {
     "name": "Steve Tung"
   },
   "engines": {
@@ -14,15 +19,20 @@
   },
   "main": "index.js",
   "scripts": {
+    "prepack": "echo ok",
+    "prepush": "echo ok",
     "lint": "eslint *.js"
   },
   "bin": {
     "timecut": "./cli.js"
   },
   "license": "BSD-3-Clause",
+  "trustedDependencies": [
+    "@stagas/timesnap"
+  ],
   "dependencies": {
     "commander": "^2.11.0",
-    "timesnap": "0.3.3"
+    "@stagas/timesnap": "^0.3.4"
   },
   "devDependencies": {
     "eslint": "^7.32.0"

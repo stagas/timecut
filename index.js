@@ -30,7 +30,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-const timesnap = require('timesnap');
+const timesnap = require('@stagas/timesnap');
 const path = require('path');
 const fs = require('fs');
 const spawn = require('child_process').spawn;
@@ -216,7 +216,7 @@ module.exports = async function (config) {
         let frameLength = Math.floor(framesLeft / threads--);
         let frameStart = startFrame;
         let frameEnd = frameStart + frameLength;
-        let threadConfig = Object.assign({} , timesnapConfig, {
+        let threadConfig = Object.assign({}, timesnapConfig, {
           shouldSkipFrame({ frameCount }) {
             // frameCount is 1 based
             return frameCount <= frameStart || frameCount > frameEnd;
