@@ -1,6 +1,6 @@
 {
   "name": "@stagas/timecut",
-  "version": "0.3.4-prerelease",
+  "version": "0.3.4",
   "description": "Record smooth movies of web pages",
   "repository": {
     "type": "git",
